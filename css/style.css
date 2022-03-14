@@ -1,0 +1,27 @@
+*{
+    text-decoration: none;
+}
+
+.body{
+    width: 1000px;
+    margin: auto;
+}
+
+.post-form{
+    width: 900px;
+    margin: auto;    
+}
+
+.post-form #publisher,#post_content,#submit{
+    border-radius: 4px;
+    padding: 6px;
+    width: 900px;
+    margin: auto;    
+}
+
+#submit{
+    width: 915px;
+    margin: auto;
+    background-color: rgb(55, 0, 255);
+    color: bisque;
+}
