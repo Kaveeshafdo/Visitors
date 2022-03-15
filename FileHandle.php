@@ -16,8 +16,10 @@ class FileHandle
     public function writeFile($pub,$content,$date)
     {
         $line = $pub." , ".$content." , ".$date;
-        echo $line;
-        $fh = fopen($this->file, 'r+');
-        fputcsv($fh);
+        
+        //echo $line;
+        $fh = fopen($this->file, 'a+');
+        fwrite($fh, $line);
+        //fputcsv($fh);
     }
 }
