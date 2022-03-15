@@ -6,11 +6,6 @@ include 'FileHandle.php';
 date_default_timezone_set("Europe/Stockholm");
 $trn_date = date("Y-m-d H:i:s");
 
-$file = 'C:\\xampp\\htdocs\\Visitors\\info.csv';
-$fh = fopen($file, 'r');
-while (list($name, $post, $datetime) = fgetcsv($fh, 1024, ',')) {
-    printf("<p>%s , %s , %s</p>", $name, $post, $datetime);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($_POST['publisher'] != "" && $_POST['post_content'] != "") {
@@ -29,4 +24,10 @@ function test_input($data)
 $fileHandle = new FileHandle();
 $fileHandle->writeFile($publisher,$postContent,$trn_date);
  
+//$file = 'C:\\xampp\\htdocs\\Visitors\\info.csv';
+//$fh = fopen($file, 'r');
+//while (list($name, $post, $datetime) = fgetcsv($fh, 1024, ',')) {
+//    printf("<p>%s , %s , %s</p>", $name, $post, $datetime);
+//}
+
 ?>
