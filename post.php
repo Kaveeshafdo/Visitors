@@ -20,9 +20,7 @@ function test_input($data)
     $data3 = htmlspecialchars($data2);
     return $data3;
 }
-
 $fileHandle = new FileHandle();
 $fileHandle->writeFile($publisher,$postContent,$trn_date);
-$fileHandle->readFile();
 
 ?>
