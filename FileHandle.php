@@ -16,6 +16,6 @@ class FileHandle
     public function writeFile($pub,$content,$date)
     {
         $fh = fopen($this->file, 'r+');
-        fputcsv($fh,$line);
+        fputcsv($fh,$pub+$content+$date);
     }
 }
