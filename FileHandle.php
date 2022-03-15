@@ -6,6 +6,14 @@ class FileHandle
     public $file = 'info.csv';
     public $arrContent=array();
 
+    public function getArrContent(){
+        return $this->arrContent;
+    }
+
+    public function setArrContent($arr[]){
+        $this->arrContent = $arr;
+    }
+
 
 
     public function readFile()
