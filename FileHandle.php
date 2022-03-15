@@ -3,7 +3,7 @@
 class FileHandle
 {
 
-    public $file = 'info.csv';
+    public $file = 'C:\\xampp\\htdocs\\Visitors\\info.csv';
 
     public function readFile()
     {
@@ -15,7 +15,9 @@ class FileHandle
 
     public function writeFile($pub,$content,$date)
     {
+        $line = $pub." , ".$content." , ".$date;
+        echo $line;
         $fh = fopen($this->file, 'r+');
-        fputcsv($fh,$pub+$content+$date);
+        fputcsv($fh);
     }
 }
