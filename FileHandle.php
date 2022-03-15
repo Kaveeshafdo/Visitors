@@ -5,7 +5,11 @@ class FileHandle
 
     public $file = 'info.csv';
 
+<<<<<<< HEAD
     public $arrContent=array();
+=======
+    public $arrContent = array("Kass","dsdss","dsdcs");
+>>>>>>> 0be6bd31a6ebf29f2ab6da796b7b180052e11640
 
 
     public function readFile()
