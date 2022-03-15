@@ -5,13 +5,16 @@
 }
 
 .body {
+
     width: 1000px;
     margin: auto;
+    margin-top: 20px;
 }
 
 .post-form {
     width: 900px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .post-form #publisher,
@@ -38,4 +41,49 @@
 
 .head-name {
     color: rgb(18, 18, 214);
+}
+
+.post {
+    width: 800px;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+.post-date {
+    float: left;
+    font-size: 12px;
+    background-color: aquamarine;
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.post-name {
+    float: left;
+    font-size: 12px;
+    background-color: rgb(252, 164, 205);
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.post-content {
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 17px;
+    background-color: rgb(224, 218, 221);
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.delete-btn{
+    margin: 5px;
+    margin-left: 725px;
+    border-radius: 10px;
+    color: aliceblue;
+    border: 1px solid red;
+    background-color: red;
+    padding: 4px 12px;
 }

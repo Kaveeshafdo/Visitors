@@ -5,14 +5,14 @@ class FileHandle
 
     public $file = 'info.csv';
 
-    public $arrContent;
+    public $arrContent=array();
 
 
     public function readFile()
     {   
-        $fh = fopen($this->file, 'r');
-        while (list($name, $post, $datetime) = fgetcsv($fh, 1024, ',')) {
-            $this->arrContent = array_merge($this->arrContent, array($name,$post,$datetime));
+        $fh = file($this->file);
+        foreach($fh as $line){
+            $this->arrContent[] = explode(",",$line);
         }
         return $this->arrContent;
     }

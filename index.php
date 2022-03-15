@@ -26,18 +26,28 @@
                 <input type="submit" id="submit" name="submit" value="Submit">
             </form>
         </div>
+
+        <?php
+        require_once 'FileHandle.php';
+
+        $fileHandle = new FileHandle();
+        $arr = $fileHandle->readFile();
+        for ($i = 0; $i < count($arr); $i++) {
+            $arr1 = $arr[$i];
+            //echo $arr1;
+            echo '<div class="post">
+    <div class="post-date">' . $arr1[2] . '</div>
+    <div class="post-name">' . $arr1[0] . '</div>
+    <div class="post-content">' . $arr1[1] . '</div>
+    <button class="delete-btn" value="'.$i.'">Remove</button>
+    </div>';
+        }
+
+
+        ?>
     </div>
 
 
 </body>
 
 </html>
-
-<?php
-//require_once 'FileHandle.php';
-
-//$fileHandle = new FileHandle();
-//$fileHandle->readFile();
-
-
-?>
