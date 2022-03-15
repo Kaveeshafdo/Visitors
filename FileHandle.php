@@ -13,7 +13,7 @@ class FileHandle
         }
     }
 
-    public function writeFile($line)
+    public function writeFile($pub,$content,$date)
     {
         
     }
