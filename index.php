@@ -22,7 +22,16 @@
         </div>
     </div>
 
-   
+
 </body>
 
 </html>
+
+<?php
+//require_once 'FileHandle.php';
+
+//$fileHandle = new FileHandle();
+//$fileHandle->readFile();
+
+
+?>
