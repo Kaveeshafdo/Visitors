@@ -10,11 +10,9 @@ class FileHandle
         return $this->arrContent;
     }
 
-    public function setArrContent($arr[]){
+    public function setArrContent($arr){
         $this->arrContent = $arr;
     }
-
-
 
     public function readFile()
     {   
