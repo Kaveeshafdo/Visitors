@@ -12,6 +12,7 @@ class FileHandle
         while (list($name, $post, $datetime) = fgetcsv($fh, 1024, ',')) {
             $this->arrContent = array_merge($this->arrContent, array($name,$post,$datetime));
         }
+        return $this->arrContent;
     }
 
     public function writeFile($pub,$content,$date)
