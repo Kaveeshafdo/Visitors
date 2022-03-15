@@ -11,6 +11,11 @@
 
 <body>
 
+    <div class="header">
+        <div class="header-name">
+            <h1 class="head-name">visitor</h1>
+        </div>
+    </div>
     <div class="body">
         <div class="post-form">
             <form action="post.php" method="post">

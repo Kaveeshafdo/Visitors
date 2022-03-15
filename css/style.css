@@ -1,5 +1,7 @@
 * {
     text-decoration: none;
+    margin: auto;
+    padding: none;
 }
 
 .body {
@@ -26,4 +28,14 @@
     margin: auto;
     background-color: rgb(55, 0, 255);
     color: bisque;
+}
+
+.header {
+    width: auto;
+    padding: 12px;
+    background-color: rgb(202, 202, 169);
+}
+
+.head-name {
+    color: rgb(18, 18, 214);
 }
