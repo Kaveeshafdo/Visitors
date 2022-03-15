@@ -18,6 +18,6 @@ class FileHandle
         $line = $pub." , ".$content." , ".$date;
         echo $line;
         $fh = fopen($this->file, 'r+');
-        fputcsv($fh);
+        //fputcsv($fh);
     }
 }
