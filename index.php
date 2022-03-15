@@ -12,7 +12,7 @@
 <body>
     <div class="body">
         <div class="post-form">
-            <form action="#" method="post">
+            <form action="post.php" method="post">
                 <label for="publisher">Name or Alias</label>
                 <input name="publisher" id="publisher" type="text">
                 <label for="post_content">Post content</label>
