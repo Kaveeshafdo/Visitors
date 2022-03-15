@@ -4,30 +4,32 @@ class FileHandle
 {
 
     public $file = 'info.csv';
-    public $arrContent=array();
+    public $arrContent = array();
 
-    public function getArrContent(){
+    public function getArrContent()
+    {
         return $this->arrContent;
     }
 
-    public function setArrContent($arr){
+    public function setArrContent($arr)
+    {
         $this->arrContent = $arr;
     }
 
     public function readFile()
-    {   
+    {
+        $this->arrContent = array();
         $fh = file($this->file);
-        foreach($fh as $line){
-            $this->arrContent[] = explode(",",$line);
+        foreach ($fh as $line) {
+            $this->arrContent[] = explode(",", $line);
         }
         return $this->arrContent;
     }
 
-    public function writeFile($pub,$content,$date)
+    public function writeFile($pub, $content, $date)
     {
-        $line = $pub." , ".$content." , ".$date;    
+        $line = $pub . " , " . $content . " , " . $date;
         $fh = fopen($this->file, 'a+');
-        fwrite($fh,"\n".$line);
-
+        fwrite($fh, "\n" . $line);
     }
 }
