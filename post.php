@@ -1,7 +1,7 @@
 
 <?php
 include 'index.php';
-include 'FileHandle.php';
+require_once 'FileHandle.php';
 
 date_default_timezone_set("Europe/Stockholm");
 $trn_date = date("Y-m-d H:i:s");
@@ -21,6 +21,9 @@ function test_input($data)
     return $data3;
 }
 $fileHandle = new FileHandle();
-$fileHandle->writeFile($publisher,$postContent,$trn_date);
-
+$fileHandle->readFile();
+$arrContent = $fileHandle->getArrContent();
+$arrContent[] = array($publisher,$postContent,$trn_date);
+$fileHandle->setArrContent($arrContent);
+$fileHandle->writeFile();
 ?>
