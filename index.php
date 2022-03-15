@@ -34,13 +34,14 @@
         $arr = $fileHandle->readFile();
         for ($i = 0; $i < count($arr); $i++) {
             $arr1 = $arr[$i];
-            //echo $arr1;
             echo '<div class="post">
     <div class="post-date">' . $arr1[2] . '</div>
     <div class="post-name">' . $arr1[0] . '</div>
     <div class="post-content">' . $arr1[1] . '</div>
-    <button class="delete-btn" value="' . $i . '">Remove</button>
-    </div>';
+    <form action="delete.php" method="GET">
+    <input type="hidden" name="subbtn" value="' . $i . '">
+    <input type="submit" class="delete-btn" value="Remove">
+    </form></div>';
         }
         ?>
     </div>
