@@ -4,7 +4,9 @@ class FileHandle
 {
 
     public $file = 'info.csv';
+
     public $arrContent;
+
 
     public function readFile()
     {   
@@ -17,9 +19,9 @@ class FileHandle
 
     public function writeFile($pub,$content,$date)
     {
-        $line = $pub." , ".$content." , ".$date;
-        //echo $line;
+        $line = $pub." , ".$content." , ".$date;    
         $fh = fopen($this->file, 'a+');
-        fwrite($fh, "\n".$line);
+        fwrite($fh,"\n".$line);
+
     }
 }

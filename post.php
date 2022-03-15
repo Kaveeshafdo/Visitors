@@ -20,14 +20,9 @@ function test_input($data)
     $data3 = htmlspecialchars($data2);
     return $data3;
 }
-//echo $publisher, " , ", $postContent, " , ", $trn_date;
+
 $fileHandle = new FileHandle();
 $fileHandle->writeFile($publisher,$postContent,$trn_date);
- 
-//$file = 'C:\\xampp\\htdocs\\Visitors\\info.csv';
-//$fh = fopen($file, 'r');
-//while (list($name, $post, $datetime) = fgetcsv($fh, 1024, ',')) {
-//    printf("<p>%s , %s , %s</p>", $name, $post, $datetime);
-//}
+$fileHandle->readFile();
 
 ?>
